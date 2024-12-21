@@ -74,3 +74,31 @@ body {
     animation: blink 3s infinite;
     animation-delay: 2s;
 }
+
+.grid-item {
+    max-width: 100%;
+}
+
+.tab h5 {
+    position: relative;
+    cursor: pointer; 
+}
+
+.tab h5.active::after {
+    content: "";
+    position: absolute;
+    bottom: -5px; 
+    left: 0;
+    width: 100%; 
+    height: 2px;
+    background-color: white; 
+}
+
+
+.content {
+    display: none; 
+}
+
+.content.active {
+    display: flex; 
+}
