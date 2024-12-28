@@ -17,3 +17,20 @@ document.querySelectorAll('.tab h5').forEach(tab => {
         }
     });
 });
+document.querySelectorAll('.tab button').forEach(button => {
+    button.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        const target = document.querySelector(this.getAttribute('data'));
+        if (target) {
+            document.querySelectorAll('.active').forEach(content => {
+                content.classList.remove('active');
+            });
+
+            document.querySelector('#btn-dichvu').classList.add('active');
+            document.querySelector('#dichvu').classList.add('active');
+
+            target.scrollIntoView({ behavior: 'smooth' });
+        }
+    });
+});

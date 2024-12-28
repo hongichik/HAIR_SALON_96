@@ -102,3 +102,35 @@ body {
 .content.active {
     display: flex; 
 }
+
+#dichvu td,th{
+    color: #fff;
+}
+
+.custom-btn {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom, #ff4c4c, #e60000); /* Hiệu ứng gradient */
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 30px;
+    font-size: 20px;
+    text-transform: uppercase;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+    position: relative;
+}
+
+
+.custom-btn:before {
+    left: 10px;
+}
+
+.custom-btn:after {
+    right: 10px;
+}
+
+.custom-btn:hover {
+    background: linear-gradient(to bottom, #e60000, #ff4c4c);
+    box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.5);
+}
