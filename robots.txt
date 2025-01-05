@@ -1,3 +1,4 @@
 User-agent: *
 Disallow: /assets/
 Allow: /
+Sitemap: https://salonbeem96.vn/sitemap.xml
