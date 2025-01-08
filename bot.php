@@ -26,7 +26,7 @@ if (strcasecmp($message, "ID") === 0) {
     file_get_contents($url, false, $context);
 }
 
-if (strcasecmp($message, "Chủ nhân của bạn là ai") === 0) { 
+if (strcasecmp($message, "Chủ nhân của bạn là ai") === 0 || strcasecmp($message, "chủ nhân của bạn là ai") === 0|| strcasecmp($message, "chủ nhân là ai") === 0) { 
     $url = "https://api.telegram.org/bot$botToken/sendMessage";
     $data = [
         'chat_id' => $chatId,
