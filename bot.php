@@ -1,4 +1,8 @@
 <?php
+phpinfo();
+?>
+
+<?php
 include_once('./env.php');
 
 $update = file_get_contents("php://input");
