@@ -30,7 +30,7 @@ if (strcasecmp($message, "Chủ nhân của bạn là ai") === 0) {
     $url = "https://api.telegram.org/bot$botToken/sendMessage";
     $data = [
         'chat_id' => $chatId,
-        'text' => "Chủ nhân của bạn là Phạm Nguyên Hồng. Bạn có thể liên hệ qua:\nFacebook: https://www.facebook.com/pham.nguyen.hong.863330/ \nZalo: 0123456789"
+        'text' => "Chủ nhân của bạn là Phạm Nguyên Hồng. Bạn có thể liên hệ qua:\nFacebook: https://www.facebook.com/pham.nguyen.hong.863330/ \nZalo: 0918447062"
     ];
 
     $options = [
