@@ -2,19 +2,42 @@
 
 <?php
 // Kiểm tra nếu form được gửi đi
+$text_gui = "";
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     foreach ($_POST as $key => $value) {
         if ($key == 'sdt') {
-            echo "SĐT: " . $value . "<br>";
+            $text_gui .= "SĐT: " . $value . "<br>";
         } elseif ($key == 'hoten') {
-            echo "Họ tên: " . $value . "<br>";
+            $text_gui .= "Họ tên: " . $value . "<br>";
         } elseif ($key == 'sokhach') {
-            echo "Số khách: " . $value . "<br>";
+            $text_gui .= "Số khách: " . $value . "<br>";
         } elseif ($key == 'khunggio') {
-            echo "Khung giờ: " . $value . "<br>";
+            $text_gui .= "Khung giờ: " . $value . "<br>";
         } else {
-            echo $value . "<br>";
+            $text_gui .= $value . "<br>";
         }
     }
 }
+
+
+include_once('./env.php');
+$targetChatId = "5768813690"; 
+
+$url = "https://api.telegram.org/bot$botToken/sendMessage";
+$data = [
+    'chat_id' => $targetChatId, 
+    'text' => $text_gui
+];
+
+$options = [
+    'http' => [
+        'header' => "Content-Type: application/json\r\n",
+        'method' => 'POST',
+        'content' => json_encode($data),  
+    ],
+];
+
+$context = stream_context_create($options);
+
+file_get_contents($url, false, $context);
 ?>

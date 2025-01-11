@@ -202,5 +202,5 @@ const TinhTong = () => {
     document.getElementById('tong').innerHTML = `Tổng Bill: ${ tong_show } VNĐ`;
     document.getElementById('giamgia').innerHTML = `Tiếc kiệm: ${ new Intl.NumberFormat('en-DE').format(sotiengiam) } VNĐ , đã giảm : ${ ptgiam * 100 }%`;
 
-    document.getElementById('tongbill').value = `Tổng Bill: ${ tong_show } VNĐ <br> đã giảm giá: ${ new Intl.NumberFormat('en-DE').format(sotiengiam) } VNĐ`;
+    document.getElementById('tongbill').value = `Tổng Bill: ${ tong_show } VNĐ <br> Đã giảm giá: ${ new Intl.NumberFormat('en-DE').format(sotiengiam) } VNĐ`;
 }
