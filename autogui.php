@@ -29,7 +29,7 @@ $url = "https://api.telegram.org/bot$botToken/sendMessage";
 
 foreach ($targetChatIds as $chatId) {
     $data = [
-        'chat_id' => $targetChatId,
+        'chat_id' => $chatId,
         'text' => $text_gui,
     ];
 
