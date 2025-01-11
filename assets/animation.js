@@ -13,9 +13,9 @@ var ptgiam = 0;
 var sotiengiam = 0
 
 
-window.onload = function() {
+window.onload = function () {
     const today = new Date();
-    const formattedDate = today.toISOString().split('T')[0];
+    const formattedDate = today.toISOString().split('T')[ 0 ];
     document.getElementById('ngaydat').value = formattedDate;
 };
 
@@ -186,7 +186,7 @@ const TinhTong = () => {
     sotiengiam = sotiengiam - tong;
 
     if (goi == 80000) {
-        tong_show = new Intl.NumberFormat('en-DE').format(tong) + " - " + new Intl.NumberFormat('en-DE').format(tong + 20000);        
+        tong_show = new Intl.NumberFormat('en-DE').format(tong) + " - " + new Intl.NumberFormat('en-DE').format(tong + 20000);
     }
     else {
         tong_show = new Intl.NumberFormat('en-DE').format(tong);
@@ -195,14 +195,14 @@ const TinhTong = () => {
     if (taynhuom_nam == 300000) {
         tong_show = new Intl.NumberFormat('en-DE').format(tong) + " - " + new Intl.NumberFormat('en-DE').format(tong + 100000);
     }
-    else if(taynhuom_nam != 0) {
+    else if (taynhuom_nam != 0) {
         tong_show = new Intl.NumberFormat('en-DE').format(tong);
     }
 
     if (taynhuom_nam == 500000) {
         tong_show = new Intl.NumberFormat('en-DE').format(tong) + " - " + new Intl.NumberFormat('en-DE').format(tong + 200000);
     }
-    else if(taynhuom_nam != 0)  {
+    else if (taynhuom_nam != 0) {
         tong_show = new Intl.NumberFormat('en-DE').format(tong);
     }
 
@@ -211,3 +211,32 @@ const TinhTong = () => {
 
     document.getElementById('tongbill').value = `Tổng Bill: ${ tong_show } VNĐ \n Đã giảm giá: ${ new Intl.NumberFormat('en-DE').format(sotiengiam) } VNĐ`;
 }
+
+
+document.getElementById('bookingForm').addEventListener('submit', function (event) {
+    event.preventDefault();
+
+    const formData = new FormData(this);
+
+    fetch('/autogui.php', {
+        method: 'POST',
+        body: formData
+    })
+        .then(response => response.text())
+        .then(data => {
+            Swal.fire({
+                title: 'Cảm ơn bạn đã đặt lịch hẹn!',
+                text: 'Chúng tôi sẽ liên hệ với bạn sớm nhất.',
+                icon: 'success',
+                confirmButtonText: 'Đóng'
+            });
+        })
+        .catch(error => {
+            Swal.fire({
+                title: 'Đã xảy ra lỗi!',
+                text: 'Vui lòng thử lại.',
+                icon: 'error',
+                confirmButtonText: 'Đóng'
+            });
+        });
+});
