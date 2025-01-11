@@ -244,7 +244,6 @@ document.getElementById('bookingForm').addEventListener('submit', function (even
 
 
 document.querySelector('.btn.btn-light').addEventListener('click', function(event) {
-    event.preventDefault(); 
     goi = 0;
     uonnhom = 0;
     tay = 0;
