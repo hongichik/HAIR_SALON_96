@@ -26,7 +26,8 @@ $targetChatId = "5768813690";
 $url = "https://api.telegram.org/bot$botToken/sendMessage";
 $data = [
     'chat_id' => $targetChatId, 
-    'text' => $text_gui
+    'text' => $text_gui,
+    'parse_mode' => 'HTML',
 ];
 
 $options = [
