@@ -178,6 +178,7 @@ const TinhTong = () => {
         }
     }
 
+    tong = tong*soKhach;
     sotiengiam = tong;
     tong = tong * (1 - ptgiam);
 
