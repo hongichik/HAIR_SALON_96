@@ -97,8 +97,8 @@
                 </div>
             </a>
         </div>
-        <a href="#dichvu" class="container text-center mt-1 tab">
-            <button class="custom-btn" data="#dichvu">«« Xem Báo Giá »»</button>
+        <a href="#datlich" class="container text-center mt-1">
+            <button class="custom-btn">«« Đặt lịch »»</button>
         </a>
         <a data-aos="fade-up" href="https://maps.app.goo.gl/9k6gpndFnh7VH49w5?g_st=iz" target="_blank"
             class="text-decoration-none text-white d-flex px-2 w-100 mt-3">
@@ -223,10 +223,13 @@
         </div>
 
         <div class="flex-column content" id="video">
-            <iframe width="100%" height="607" src="https://www.youtube.com/embed/yzgkbTNJryg"  frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            <iframe width="100%" height="607" src="https://www.youtube.com/embed/rB_B_Wlmcjw"  frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <iframe width="100%" height="607" src="https://www.youtube.com/embed/yzgkbTNJryg" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <iframe width="100%" height="607" src="https://www.youtube.com/embed/rB_B_Wlmcjw" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         </div>
-
 
         <div id="dichvu" class="flex-column content" style="font-family: Arial, sans-serif;">
             <table class="table table-bordered mt-4">
@@ -268,12 +271,12 @@
             </table>
             <table class="table table-bordered mt-4">
                 <tbody>
-                    
+
                     <!-- Phục Hồi - Điều Trị -->
                     <tr>
                         <td colspan="3" class="fw-bold">Phục Hồi - Điều Trị</td>
                     </tr>
-                    
+
                     <tr>
                         <td colspan="3" class="fw-bold">Hấp Dưỡng Collagen</td>
                     </tr>
@@ -306,19 +309,19 @@
             </table>
             <table class="table table-bordered mt-4">
                 <tbody>
-                    
-                                <!-- Highlight -->
-                                <tr>
-                                    <td colspan="2" class="fw-bold">Highlight</td>
-                                </tr>
-                                <tr>
-                                    <td>Highlight</td>
-                                    <td>600.000đ - 1.000.000đ</td>
-                                </tr>
-                                <tr>
-                                    <td>Light Sợi</td>
-                                    <td>300.000đ - 600.000đ</td>
-                                </tr>
+
+                    <!-- Highlight -->
+                    <tr>
+                        <td colspan="2" class="fw-bold">Highlight</td>
+                    </tr>
+                    <tr>
+                        <td>Highlight</td>
+                        <td>600.000đ - 1.000.000đ</td>
+                    </tr>
+                    <tr>
+                        <td>Light Sợi</td>
+                        <td>300.000đ - 600.000đ</td>
+                    </tr>
                 </tbody>
             </table>
 
@@ -411,24 +414,358 @@
                     </tr>
                 </tbody>
             </table>
-            
+
         </div>
 
 
+        <div id="datlich" class="d-flex mt-5 flex-column">
+            <h5 class="mx-auto">Đặt lịch</h5>
+            <form action="/a" method="post"  class="d-flex flex-column" style="font-family: Arial, sans-serif;">
+                <div class="form-group mb-2">
+                    <label class="fw-bold">Dịch vụ</label>
+                    <select class="form-control" id="gioitinh">
+                        <option value="Nữ">Dịch vụ cho nữ</option>
+                        <option value="Nam">Dịch vụ cho nam</option>
+                    </select>
+                </div>
+                <div class="form-group mb-2">
+                    <label class="fw-bold">Họ và tên</label>
+                    <input type="text" class="form-control" placeholder="Họ và tên của bạn" required>
+                </div>
+                <div class="form-group mb-2">
+                    <label class="fw-bold">Số điện thoại</label>
+                    <input type="text" class="form-control" placeholder="Số điện thoại" required>
+                </div>
+                <div class="form-group mb-2">
+                    <label class="fw-bold">Tổng số khách</label>
+                    <input type="number" class="form-control" placeholder="Số khách" min="1" value="1">
+                    <small class="form-text text-muted tab-nu active" style="color: white!important;">Đi từ 2 người trở
+                        lên
+                        khuyến mãi 20% tổng bill</small>
+                </div>
+                <div class="form-group mb-2 tab-nu active">
+                    <label class="fw-bold mb-2">Dịch vụ gội cắt</label>
+                    <div class="form-check w-100 d-flex flex-wrap">
+                        <div class="d-flex mx-auto" style="position: relative;">
+                            <input type="radio" id="" name="service-1" value="Gội cao cấp: 80 - 100k"
+                                style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; opacity: 0;">
+                            <label for="" class="btn btn-outline-secondary px-1">Gội cao cấp: 80 - 100k</label>
+                        </div>
+                        <div class="d-flex mx-auto" style="position: relative;">
+                            <input type="radio" id="" name="service-1" value="Gội cắt: 190k"
+                                style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; opacity: 0;">
+                            <label for="" class="btn btn-outline-secondary px-1">Gội cắt: 190k</label>
+                        </div>
+                        <div class="d-flex mx-auto" style="position: relative;">
+                            <input type="radio" id="" name="service-1" value="Gội(cao cấp) cắt: 190k"
+                                style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; opacity: 0;">
+                            <label for="" class="btn btn-outline-secondary px-1">Gội(cao cấp) cắt: 190k</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group mb-2 tab-nu active">
+                    <label class="fw-bold mb-2">Dịch vụ duỗi, uốn, nhuộm</label>
+
+                    <div class="form-check w-100 d-flex flex-wrap">
+                        <table class="table table-bordered mt-4" style="color: #fff;">
+                            <tbody>
+                                <!-- Phục Hồi - Điều Trị -->
+                                <tr>
+                                    <td colspan="3" class="fw-bold">Thường</td>
+                                </tr>
+                                <tr>
+                                    <td>S</td>
+                                    <td>M</td>
+                                    <td>L</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="d-flex mx-auto" style="position: relative;">
+                                            <input type="radio" id="" name="service"
+                                                value="Dịch vụ duỗi, uốn, nhuộm(thường): 500k(S)"
+                                                style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; opacity: 0;">
+                                            <label for="" class="btn btn-outline-secondary px-1">500.000đ</label>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="d-flex mx-auto" style="position: relative;">
+                                            <input type="radio" id="" name="service"
+                                                value="Dịch vụ duỗi, uốn, nhuộm(thường): 600k(M)"
+                                                style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; opacity: 0;">
+                                            <label for="" class="btn btn-outline-secondary px-1">600.000đ</label>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="d-flex mx-auto" style="position: relative;">
+                                            <input type="radio" id="" name="service"
+                                                value="Dịch vụ duỗi, uốn, nhuộm(thường): 700k(L)"
+                                                style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; opacity: 0;">
+                                            <label for="" class="btn btn-outline-secondary px-1">700.000đ</label>
+                                        </div>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td colspan="3" class="fw-bold">Trung bình</td>
+                                </tr>
+
+                                <tr>
+                                    <td>
+                                        <div class="d-flex mx-auto" style="position: relative;">
+                                            <input type="radio" id="" name="service"
+                                                value="Dịch vụ duỗi, uốn, nhuộm(trung bình): 600k(S)"
+                                                style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; opacity: 0;">
+                                            <label for="" class="btn btn-outline-secondary px-1">600.000đ</label>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="d-flex mx-auto" style="position: relative;">
+                                            <input type="radio" id="" name="service"
+                                                value="Dịch vụ duỗi, uốn, nhuộm(trung bình): 700k(M)"
+                                                style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; opacity: 0;">
+                                            <label for="" class="btn btn-outline-secondary px-1">700.000đ</label>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="d-flex mx-auto" style="position: relative;">
+                                            <input type="radio" id="" name="service"
+                                                value="Dịch vụ duỗi, uốn, nhuộm(trung bình): 800k(L)"
+                                                style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; opacity: 0;">
+                                            <label for="" class="btn btn-outline-secondary px-1">800.000đ</label>
+                                        </div>
+                                    </td>
+                                </tr>
 
 
-        <div id="gallery" class="mt-5">
-            <!-- <div data-aos="fade-up" class="grid-item"><img src="images/anh_tiem/1.JPG" alt=""></div>
-            <div data-aos="fade-up" class="grid-item"><img src="images/anh_tiem/2.JPG" alt=""></div>
-            <div data-aos="fade-up" class="grid-item"><img src="images/anh_tiem/3.JPG" alt=""></div>
-            <div data-aos="fade-up" class="grid-item"><img src="images/anh_tiem/4.JPG" alt=""></div> -->
+                                <tr>
+                                    <td colspan="3" class="fw-bold">Cao cấp</td>
+                                </tr>
+
+                                <tr>
+                                    <td>
+                                        <div class="d-flex mx-auto" style="position: relative;">
+                                            <input type="radio" id="" name="service"
+                                                value="Dịch vụ duỗi, uốn, nhuộm(cao cấp): 700k(S)"
+                                                style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; opacity: 0;">
+                                            <label for="" class="btn btn-outline-secondary px-1">700.000đ</label>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="d-flex mx-auto" style="position: relative;">
+                                            <input type="radio" id="" name="service"
+                                                value="Dịch vụ duỗi, uốn, nhuộm(cao cấp): 800k(M)"
+                                                style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; opacity: 0;">
+                                            <label for="" class="btn btn-outline-secondary px-1">800.000đ</label>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="d-flex mx-auto" style="position: relative;">
+                                            <input type="radio" id="" name="service"
+                                                value="Dịch vụ duỗi, uốn, nhuộm(cao cấp): 900k(L)"
+                                                style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; opacity: 0;">
+                                            <label for="" class="btn btn-outline-secondary px-1">900.000đ</label>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <table class="table table-bordered mt-4" style="color: #fff;">
+                            <tbody>
+                                <!-- Phục Hồi - Điều Trị -->
+                                <tr>
+                                    <td colspan="3" class="fw-bold">Tẩy cao cấp</td>
+                                </tr>
+                                <tr>
+                                    <td>S</td>
+                                    <td>M</td>
+                                    <td>L</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="d-flex mx-auto" style="position: relative;">
+                                            <input type="radio" id="" name="taycaocap" value="Tẩy cao cấp: 600k(S)"
+                                                style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; opacity: 0;">
+                                            <label for="" class="btn btn-outline-secondary px-1">600.000đ</label>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="d-flex mx-auto" style="position: relative;">
+                                            <input type="radio" id="" name="taycaocap" value="Tẩy cao cấp: 800k(M)"
+                                                style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; opacity: 0;">
+                                            <label for="" class="btn btn-outline-secondary px-1">800.000đ</label>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="d-flex mx-auto" style="position: relative;">
+                                            <input type="radio" id="" name="taycaocap" value="Tẩy cao cấp: 1tr(L)"
+                                                style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; opacity: 0;">
+                                            <label for="" class="btn btn-outline-secondary px-1">1.000.000đ</label>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+
+                        <table class="table table-bordered mt-4" style="color: #fff;">
+                            <tbody>
+                                <!-- Phục Hồi - Điều Trị -->
+
+                                <tr>
+                                    <td colspan="3" class="fw-bold">Nâng tông</td>
+                                </tr>
+                                <tr>
+                                    <td>S</td>
+                                    <td>M</td>
+                                    <td>L</td>
+                                </tr>
+
+
+
+                                <tr>
+                                    <td>
+                                        <div class="d-flex mx-auto" style="position: relative;">
+                                            <input type="radio" id="" name="nangtong" value="Nâng tông: 400k(S)"
+                                                style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; opacity: 0;">
+                                            <label for="" class="btn btn-outline-secondary px-1">400.000đ</label>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="d-flex mx-auto" style="position: relative;">
+                                            <input type="radio" id="" name="nangtong" value="Nâng tông: 600k(M)"
+                                                style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; opacity: 0;">
+                                            <label for="" class="btn btn-outline-secondary px-1">600.000đ</label>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="d-flex mx-auto" style="position: relative;">
+                                            <input type="radio" id="" name="nangtong" value="Nâng tông: 800k(L)"
+                                                style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; opacity: 0;">
+                                            <label for="" class="btn btn-outline-secondary px-1">800.000đ</label>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- nam -->
+                <div class="form-group mb-2 tab-nam">
+                    <label class="fw-bold mb-2">Dịch vụ cắt, gội</label>
+                    <div class="form-check w-100 d-flex flex-wrap">
+                        <div class="d-flex mx-auto" style="position: relative;">
+                            <input type="radio" id="" name="dichvunam-catgoi" value="Cắt gội 70k"
+                                style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; opacity: 0;">
+                            <label for="" class="btn btn-outline-secondary px-1">Cắt gội 70k</label>
+                        </div>
+                        <div class="d-flex mx-auto" style="position: relative;">
+                            <input type="radio" id="" name="dichvunam-catgoi" value="Combo đặc biệt (cắt, gội, rửa mặt) 100k"
+                                style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; opacity: 0;">
+                            <label for="" class="btn btn-outline-secondary px-1">Combo đặc biệt (cắt, gội, rửa mặt) 100k</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group mb-2 tab-nam">
+                    <label class="fw-bold mb-2">Dịch vụ uốn, ép, nhuộm</label>
+                    <div class="form-check w-100 d-flex flex-wrap">
+                        <div class="d-flex mx-auto" style="position: relative;">
+                            <input type="radio" id="" name="dichvunam" value="Nhuộm: 300k - 400k"
+                                style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; opacity: 0;">
+                            <label for="" class="btn btn-outline-secondary px-1">Nhuộm: 300k - 400k</label>
+                        </div>
+                        <div class="d-flex mx-auto" style="position: relative;">
+                            <input type="radio" id="" name="dichvunam" value="Tẩy nhuộm 500k - 700k"
+                                style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; opacity: 0;">
+                            <label for="" class="btn btn-outline-secondary px-1">Tẩy nhuộm 500k - 700k</label>
+                        </div>
+                    </div>
+                </div>
+                <!-- end nam -->
+
+
+                <div class="form-group mb-2">
+                    <label class="fw-bold mb-2">Khung giờ</label>
+                    <div class="form-check w-100 d-flex flex-wrap justify-content-start">
+                        <div class="d-flex px-1 pt-1" style="position: relative;">
+                            <input type="radio" id="" name="khunggio" value="09:00"
+                                style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; opacity: 0;">
+                            <label for="" class="btn btn-outline-secondary px-1">09:00</label>
+                        </div>
+                        <div class="d-flex px-1 pt-1" style="position: relative;">
+                            <input type="radio" id="" name="khunggio" value="10:00"
+                                style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; opacity: 0;">
+                            <label for="" class="btn btn-outline-secondary px-1">10:00</label>
+                        </div>
+                        <div class="d-flex px-1 pt-1" style="position: relative;">
+                            <input type="radio" id="" name="khunggio" value="11:00"
+                                style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; opacity: 0;">
+                            <label for="" class="btn btn-outline-secondary px-1">11:00</label>
+                        </div>
+                        <div class="d-flex px-1 pt-1" style="position: relative;">
+                            <input type="radio" id="" name="khunggio" value="12:00"
+                                style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; opacity: 0;">
+                            <label for="" class="btn btn-outline-secondary px-1">12:00</label>
+                        </div>
+                        <div class="d-flex px-1 pt-1" style="position: relative;">
+                            <input type="radio" id="" name="khunggio" value="13:00"
+                                style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; opacity: 0;">
+                            <label for="" class="btn btn-outline-secondary px-1">13:00</label>
+                        </div>
+                        <div class="d-flex px-1 pt-1" style="position: relative;">
+                            <input type="radio" id="" name="khunggio" value="14:00"
+                                style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; opacity: 0;">
+                            <label for="" class="btn btn-outline-secondary px-1">14:00</label>
+                        </div>
+                        <div class="d-flex px-1 pt-1" style="position: relative;">
+                            <input type="radio" id="" name="khunggio" value="15:00"
+                                style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; opacity: 0;">
+                            <label for="" class="btn btn-outline-secondary px-1">15:00</label>
+                        </div>
+                        <div class="d-flex px-1 pt-1" style="position: relative;">
+                            <input type="radio" id="" name="khunggio" value="16:00"
+                                style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; opacity: 0;">
+                            <label for="" class="btn btn-outline-secondary px-1">16:00</label>
+                        </div>
+                        <div class="d-flex px-1 pt-1" style="position: relative;">
+                            <input type="radio" id="" name="khunggio" value="17:00"
+                                style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; opacity: 0;">
+                            <label for="" class="btn btn-outline-secondary px-1">17:00</label>
+                        </div>
+                        <div class="d-flex px-1 pt-1" style="position: relative;">
+                            <input type="radio" id="" name="khunggio" value="18:00"
+                                style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; opacity: 0;">
+                            <label for="" class="btn btn-outline-secondary px-1">18:00</label>
+                        </div>
+                        <div class="d-flex px-1 pt-1" style="position: relative;">
+                            <input type="radio" id="" name="khunggio" value="19:00"
+                                style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; opacity: 0;">
+                            <label for="" class="btn btn-outline-secondary px-1">19:00</label>
+                        </div>
+                    </div>
+                </div>
+
+
+                <small class="form-text text-muted" style="color: white!important;">
+                    Khung giờ từ 09:00 - 12:00 khuyến mãi 15% tổng bill <br>
+                    Khung giờ từ 09:00 - 12:00 khuyến mãi 15% tổng bill <br>
+                </small>
+                <p class="fs-5 mb-0 mt-3" id="tong" style="font-family: Arial, sans-serif;">Tổng Bill: 0đ</p>
+                <p class="fs-6 text-danger" id="giamgia" style="font-family: Arial, sans-serif;">Tiếc kiệm: 0đ </p>
+
+                <div>
+                    <button type="submit" class="btn btn-success">Đặt lịch</button>
+                    <button type="reset" class="btn btn-light">Chọn lại</button>
+                </div>
+            </form>
+
         </div>
-
         <div data-aos="fade-up" style="height:100px;"> </div>
     </div>
 
 
 </body>
+<script src="https://cdn.jsdelivr.net/npm/moment@2.29.1/moment.min.js"></script>
 <script src="assets/animation.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/4.2.2/masonry.pkgd.min.js"></script>

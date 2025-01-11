@@ -103,6 +103,14 @@ body {
     display: flex; 
 }
 
+.content-dichvu {
+    display: none; 
+}
+
+.content-dichvu.active {
+    display: flex; 
+}
+
 #dichvu td,th{
     color: #fff;
 }
@@ -133,4 +141,48 @@ body {
 .custom-btn:hover {
     background: linear-gradient(to bottom, #e60000, #ff4c4c);
     box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.5);
+}
+
+.tab-nam {
+    display: none;
+}
+
+.tab-nu {
+    display: none;
+}
+
+.tab-nu.active{
+    display: block;
+}
+
+.tab-nam.active{
+    display: block;
+}
+
+.btn-outline-secondary {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #6c757d;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    color: #6c757d;
+    background-color: transparent;
+    transition: all 0.3s ease;
+}
+
+.btn-outline-secondary:hover {
+    background-color: #f8f9fa;
+    color: #007bff;
+}
+
+input[type="radio"]:checked + .btn-outline-secondary {
+    background-color:rgba(255, 255, 255, 0.23);
+    color: #ffffff;
+    border-color: #007bff; /* Đổi viền để dễ nhận biết */
+}
+
+.btn-outline-secondary{
+    color: #fff;
 }
