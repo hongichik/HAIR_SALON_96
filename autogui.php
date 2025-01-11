@@ -30,11 +30,13 @@ $data = [
     'parse_mode' => 'HTML',
 ];
 
+$postData = http_build_query($data);
+
 $options = [
     'http' => [
-        'header' => "Content-Type: application/json\r\n",
+        'header' => "Content-Type: application/x-www-form-urlencoded\r\n",
         'method' => 'POST',
-        'content' => json_encode($data),  
+        'content' => $postData,  
     ],
 ];
 
