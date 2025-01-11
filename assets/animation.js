@@ -241,3 +241,26 @@ document.getElementById('bookingForm').addEventListener('submit', function (even
             });
         });
 });
+
+
+document.querySelector('.btn.btn-light').addEventListener('click', function(event) {
+    event.preventDefault(); 
+    goi = 0;
+    uonnhom = 0;
+    tay = 0;
+    nangtong = 0;
+    catgoi_nam = 0;
+    taynhuom_nam = 0;
+
+
+    tong = 0;
+    tong_show = 0;
+    ptgiam = 0;
+    sotiengiam = 0;
+
+    TinhTong()
+
+    const today = new Date();
+    const formattedDate = today.toISOString().split('T')[ 0 ];
+    document.getElementById('ngaydat').value = formattedDate;
+});
