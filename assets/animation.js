@@ -61,10 +61,10 @@ document.getElementById("gioitinh").addEventListener("change", function () {
     let allTabNam = document.querySelectorAll('.tab-nam');
     let allTabNu = document.querySelectorAll('.tab-nu');
 
-    if (selectedValue === "Nam") {
+    if (selectedValue === "Dịch vụ: nam") {
         allTabNu.forEach(tab => tab.classList.remove('active'));
         allTabNam.forEach(tab => tab.classList.add('active'));
-    } else if (selectedValue === "Nữ") {
+    } else if (selectedValue === "Dịch vụ: nữ") {
         allTabNam.forEach(tab => tab.classList.remove('active'));
         allTabNu.forEach(tab => tab.classList.add('active'));
     }
@@ -163,7 +163,7 @@ const TinhTong = () => {
     let soKhach = document.querySelector('input[type="number"]').value;
     let gt = document.getElementById("gioitinh").value;
     ptgiam = 0;
-    if (gt == "Nữ") {
+    if (gt == "Dịch vụ: nữ") {
         if (soKhach > 1) {
             ptgiam = 0.2;
         }
