@@ -23,7 +23,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 
 include_once('./env.php');
-$targetChatId = "7737408944"; 
+$targetChatId = "5768813690"; 
 
 $url = "https://api.telegram.org/bot$botToken/sendMessage";
 $data = [
