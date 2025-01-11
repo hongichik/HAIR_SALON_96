@@ -13,6 +13,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $text_gui .= "Số khách: " . $value . "\n";
         } elseif ($key == 'khunggio') {
             $text_gui .= "Khung giờ: " . $value . "\n";
+        } elseif ($key == 'ngaydat') {
+            $text_gui .= "Ngày đặt: " . $value . "\n";
         } else {
             $text_gui .= $value . "\n";
         }

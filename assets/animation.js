@@ -12,6 +12,13 @@ var tong_show = 0;
 var ptgiam = 0;
 var sotiengiam = 0
 
+
+window.onload = function() {
+    const today = new Date();
+    const formattedDate = today.toISOString().split('T')[0];
+    document.getElementById('ngaydat').value = formattedDate;
+};
+
 document.querySelectorAll('.tab h5').forEach(tab => {
     tab.addEventListener('click', function () {
         // Bỏ class active khỏi tất cả các tab
