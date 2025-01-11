@@ -23,23 +23,26 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 
 include_once('./env.php');
-$targetChatId = "5768813690"; 
+$targetChatId = ["5768813690","7737408944","1895689057"];
 
 $url = "https://api.telegram.org/bot$botToken/sendMessage";
-$data = [
-    'chat_id' => $targetChatId, 
-    'text' => $text_gui,
-];
 
-$options = [
-    'http' => [
-        'header' => "Content-Type: application/json\r\n",
-        'method' => 'POST',
-        'content' => json_encode($data),  
-    ],
-];
+foreach ($targetChatIds as $chatId) {
+    $data = [
+        'chat_id' => $targetChatId,
+        'text' => $text_gui,
+    ];
 
-$context = stream_context_create($options);
+    $options = [
+        'http' => [
+            'header' => "Content-Type: application/json\r\n",
+            'method' => 'POST',
+            'content' => json_encode($data),
+        ],
+    ];
 
-file_get_contents($url, false, $context);
+    $context = stream_context_create($options);
+
+    file_get_contents($url, false, $context);
+}
 ?>
