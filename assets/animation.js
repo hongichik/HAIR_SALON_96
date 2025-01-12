@@ -15,23 +15,22 @@ var sotiengiam = 0
 
 window.onload = function () {
     const today = new Date();
-    const formattedDate = today.toISOString().split('T')[ 0 ];
-    document.getElementById('ngaydat').value = formattedDate;
+    const formattedDate = today.toISOString().split('T')[0];
+
+    const ngayDatInput = document.getElementById('ngaydat');
+    ngayDatInput.value = formattedDate;
+    ngayDatInput.min = formattedDate; 
 };
 
 document.querySelectorAll('.tab h5').forEach(tab => {
     tab.addEventListener('click', function () {
-        // Bỏ class active khỏi tất cả các tab
         document.querySelector('.tab h5.active').classList.remove('active');
-        // Thêm class active vào tab hiện tại
         this.classList.add('active');
 
-        // Ẩn tất cả nội dung
         document.querySelectorAll('.content').forEach(content => {
             content.classList.remove('active');
         });
 
-        // Hiện nội dung tương ứng
         const target = document.querySelector(this.getAttribute('data'));
         if (target) {
             target.classList.add('active');
@@ -260,6 +259,9 @@ document.querySelector('.btn.btn-light').addEventListener('click', function(even
     TinhTong()
 
     const today = new Date();
-    const formattedDate = today.toISOString().split('T')[ 0 ];
-    document.getElementById('ngaydat').value = formattedDate;
+    const formattedDate = today.toISOString().split('T')[0];
+
+    const ngayDatInput = document.getElementById('ngaydat');
+    ngayDatInput.value = formattedDate;
+    ngayDatInput.min = formattedDate; 
 });
